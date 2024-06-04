@@ -26,6 +26,12 @@
         price = Integer.valueOf(Price);
     }
     
+    if (Stock == null || Stock.isEmpty()) {
+        stock = 0;
+    } else {
+        stock = Integer.valueOf(Stock);
+    }
+    
     PreparedStatement pstmt=null;
     
     String sql="insert into dessert values(?,?,?,?,?,?,?,?,?)";
